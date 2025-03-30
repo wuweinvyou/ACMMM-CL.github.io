@@ -1,0 +1,792 @@
+
+ <!-- FlatFy Theme - Andrea Galanti /-->
+ <!--Thx woodszp NJU-->
+ <!doctype html>
+ <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+ <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+ <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+ <!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+ <!--[if gt IE 9]><!--> <html> <!--<![endif]-->
+ <head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+     <meta name="description" content="ACM MM 2024 Workshop on Continual Learning">
+     <meta name="author" content="">
+ 
+     <title>CL-24: Continual Learning meets Multimodal Foundation Models: Fundamentals and Advances</title>
+ 
+     <!-- Bootstrap core CSS -->
+     <link href="./css/bootstrap.min.css" rel="stylesheet">
+  
+     <!-- Custom Google Web Font -->
+     <link href="./font-awesome/css/font-awesome.min.css" rel="stylesheet">
+     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+     <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+     
+     <!-- Custom CSS-->
+     <link href="2024/css/general.css" rel="stylesheet">
+     
+      <!-- Owl-Carousel -->
+     <link href="./css/custom.css" rel="stylesheet">
+     <link href="./css/owl.carousel.css" rel="stylesheet">
+     <link href="./css/owl.theme.css" rel="stylesheet">
+     <link href="./css/style.css" rel="stylesheet">
+     <link href="./css/animate.css" rel="stylesheet">
+     
+     <!-- Magnific Popup core CSS file -->
+     <link rel="stylesheet" href="./css/magnific-popup.css"> 
+     
+     <script src="./js/modernizr-2.8.3.min.js"></script>  <!-- Modernizr /-->
+     <script>
+        function toggleAbstractContent(id) {
+            var abstractContent = document.getElementById(id);
+            abstractContent.classList.toggle('show');
+        }
+    </script>
+     <!--[if IE 9]>
+         <script src="js/PIE_IE9.js"></script>
+     <![endif]-->
+     <!--[if lt IE 9]>
+         <script src="js/PIE_IE678.js"></script>
+     <![endif]-->
+ 
+     <!--[if lt IE 9]>
+         <script src="js/html5shiv.js"></script>
+     <![endif]-->
+ 
+ </head>
+ 
+ <body id="home">
+ 
+     <!-- Preloader -->
+     <div id="preloader">
+         <div id="status"></div>
+     </div>
+     
+     <!-- FullScreen -->
+     <div class="intro-header">
+         <div class="col-xs-12 text-center abcen1">
+             <div style="background-color: rgba(0,0,0,0.5)">
+                <!-- <h1 class="h1_home wow  animated animated" data-wow-delay="0.4s" style="color: white; text-shadow: black 0px 0px 8px; visibility: visible; animation-delay: 0.4s;">2<sup>nd</sup> Workshop on Advances in Language and Vision Research (ALVR)</h1> -->
+                
+                <h1 class="h1_home wow fadeIn" data-wow-delay="0.4s" style="text-shadow: 0 0 8px #000000;"> <br>Continual Learning meets Multimodal Foundation Models: <br>Fundamentals and Advances</h1>
+                <!-- <br> -->
+                <h3 class="h3_home wow fadeIn" data-wow-delay="0.6s" style="text-shadow: 0px 8px 4px black, 0 0 25px black"> 
+                    <!-- In conjunction with <a style="color:rgb(241, 173, 130)" href="http://www.adai.ai/dai/2024/" target="_blank"><b>DAI 2024</b></a> </p>  -->
+                    In conjunction with <a style="color:rgb(241, 173, 130)" href="https://2024.acmmm.org/" target="_blank"><b>ACM MM 2024</b></a> </p> 
+                    1 November, 2024 (9:00 AM - 17:30 PM)</p>
+                    Location: Melbourne, Australia</p>
+                    <!-- Location: UTC-12, Singapore</p> -->
+                </h3>
+            </div>
+             
+             <!--ul class="list-inline intro-social-buttons">
+                 <li><a href="https://twitter.com/galantiandrea" class="btn  btn-lg mybutton_cyano wow fadeIn" data-wow-delay="0.8s"><span class="network-name">Twitter</span></a>
+                 </li>
+                 <li id="download" ><a href="#downloadlink" class="btn  btn-lg mybutton_standard wow swing wow fadeIn" data-wow-delay="1.2s"><span class="network-name">Free Download</span></a>
+                 </li>
+             </ul-->
+         </div>    
+         <!-- /.container -->
+         <div class="col-xs-12 text-center abcen wow fadeIn">
+             <div class="button_down "> 
+                 <a class="imgcircle wow bounceInUp" data-wow-duration="1.5s"  href="#scope"> <img class="img_scroll" src="../img/icon/circle.png" alt=""> </a>
+             </div>
+         </div>
+         <!-- <span class="intro-caption">
+             Photo by <a href="https://unsplash.com/@mbenna">Mike Benna</a> on <a href="https://unsplash.com/">Unsplash</a>
+         </span> -->
+     </div>
+     
+     <!-- NavBar-->
+     <nav class="navbar-default" role="navigation">
+         <div class="container">
+             <div class="navbar-header">
+                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                     <span class="sr-only">Toggle navigation</span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <!-- <span class="icon-bar"></span> -->
+                 </button>
+                 <a class="navbar-brand" href="#home"></a>
+             </div>
+ 
+             <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+                 <ul class="nav navbar-nav">
+                     
+                     <li class="menuItem"><a href="#scope">Call For Papers</a></li>
+                     <!-- <li class="menuItem"><a href="#submit">Submission</a></li> -->
+                     <!-- <li class="menuItem"><a href="#proceedings">Proceedings</a></li> -->
+                     <li class="menuItem"><a href="#keynotes">Keynotes</a></li>
+                     <li class="menuItem"><a href="#program">Program</a></li>
+                     <!-- <li class="menuItem"><a href="#invited">Invited Speakers</a></li> -->
+                     <li class="menuItem"><a href="#submission">Submission</a></li>	
+                     <li class="menuItem"><a href="#organizers">Organizers</a></li>	
+                     <li class="menuItem"><a href="#importantdates">Important Dates</a></li>
+                     <!-- <li class="menuItem"><a href="#sponsors">Sponsor</a></li>					 -->
+                     <li class="menuItem"><a href="#contacts">Contact</a></li>
+                     <!-- <li class="menuItem dropdown">
+                        <a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Previous Workshop</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+                            <li><a class="dropdown-item" href="../2024/index.html" target="_blank" rel="noopener noreferrer">2024</a></li>
+                            
+                        </ul>
+                    </li> -->
+                 </ul>
+             </div>
+            
+         </div>
+     </nav> 
+     
+     <!-- Scope -->
+     <div id ="scope" class="content-section-a" style="border-top: 0">
+         <div class="container">
+             <div class="row">
+                 <div class="wow fadeInRightBig" data-animation-delay="200"> 
+                     <h3 class="section-heading">Call For Papers</h3>
+             
+                     <!--div class="sub-title lead3">Lorem ipsum dolor sit atmet sit dolor greand fdanrh<br> sdfs sit atmet sit dolor greand fdanrh sdfs</div-->
+                     <p class="lead"  style="text-align:justify">
+                        In recent years, with the advancement of multimodal foundation models (MMFMs), there has been a growing interest in enhancing their generalization abilities through continual learning (CL) to process diverse data types, from text to visuals, and continuously update their capabilities based on real-time inputs. Despite significant advancements in theoretical research and applications of continual learning, the community remains confronted with serious challenges. Our workshop aims to provide a venue where academic researchers and industry practitioners can come together to discuss the principles, limitations, and applications of multimodal foundation models in continual learning for multimedia applications and promote the understanding of multimodal foundation models in continual learning, innovative algorithms, and research on new multimodal technologies and applications.
+                        <br>
+                        <br>
+                        <b>Scope and Topics</b>
+                        <br>
+                        Interested topics will include, but not be limited to:
+                        <ul>
+                            <li>Lifelong / Continual / Incremental / Online Learning</li>
+                            <li>Few-shot & Transfer Learning related to Continual Learning</li>
+                            <li>Applications and use-cases of Continual Learning</li>
+                            <li>Meta-learning & Curriculum Learning & Active Learning</li>
+                            <li>Reinforcement Learning and Robotics in Continual Learning</li>
+                            <li>Ethical and Safety considerations for machines that can learn continuously</li>
+                            <li>Continuous domain adaptation / Test-time adaptation</li>
+                            <li>Vision / Sound / Speech / Language Foundation Models in any possible combination</li>
+                            <li>Self / Semi / Weakly supervised training of MMFMs</li>
+                            <li>Multi-task and Continual Learning for MMFMs</li>
+                            <li>Efficient training and inference of MMFMs</li>
+                            <li>Parameter-efficient fine-tuning, prompting, and adapters for MMFMs</li>
+                            <li>Generative MMFMs (e.g. text-to-image / video /3D generation)</li>
+                            <li>Ethics, risks, and fairness of MMFMs</li>
+                            <li>Benchmarks, scenarios, evaluation protocols, and metrics for the above topics</li>
+                        </ul>
+                        
+                     </p> 
+                 </div>   
+             </div>
+         </div>
+         <!-- /.container -->
+     </div>
+
+    <!-- Keynotes -->
+    <div id="keynotes" class="content-section-a">
+        <div class="container">
+            <div class="row">
+                <div class="wow fadeInRightBig" data-animation-delay="200"> 
+                    <h3 class="section-heading">Keynote Speakers</h3>
+
+                    <!--div class="sub-title lead3">Lorem ipsum dolor sit atmet sit dolor greand fdanrh<br> sdfs sit atmet sit dolor greand fdanrh sdfs</div-->
+                    <div class="row wow fadeInRightBig"  data-animation-delay="200">
+                        <div class="col-sm-2 wow fadeInRightBig"  data-animation-delay="200">   
+                            <center><img  class="img-responsive img-rounded" style="border-radius: 50%" height="150" width="150" src="2024/img/keynoteSpeaker/PiotrKoniusz.jpg" alt=""></center>
+                            <h4 class="section-heading"><center><a href="https://users.cecs.anu.edu.au/~koniusz/">Piotr Koniusz</a></center></h4>
+                        </div>
+                        <div class="col-sm-10 wow fadeInRightBig"  data-animation-delay="200">   
+                            Piotr Koniusz is a Principal Research Scientist in the Machine Learning Research Group at Data61/CSIRO and
+                            an Honorary Associate Professor at the Australian National University. He obtained a BSc in Telecommunications and Software Engineering in 2004 from Warsaw University of Technology, Poland, and a PhD in Computer Vision in
+                            2013 at CVSSP, University of Surrey, UK. Between 2013-2015, he was a postdoctoral researcher with the LEAR
+                            team at INRIA, France. Dr. Koniusz’s research interests are centered around representation learning and learning-to-
+                            learn paradigms, with a focus on contrastive, incremental and few-shot learning across various data modalities. His
+                            contributions to the field have been recognized through the Sang Uk Lee Best Student Paper Award at ACCV’22 and
+                            the Runner-up APRS/IAPR Best Student Paper Award at DICTA’22. He has served as a Workshop Program Co-Chair for NeurIPS’23.
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row wow fadeInRightBig"  data-animation-delay="200">
+                        <div class="col-sm-2 wow fadeInRightBig"  data-animation-delay="200">   
+                            <center><img  class="img-responsive img-rounded" style="border-radius: 50%" height="150" width="150" src="2024/img/keynoteSpeaker/QianruSun.jpg" alt=""></center>
+                            <h4 class="section-heading"><center><a href="https://qianrusun.com/">Qianru Sun</a></center></h4>
+                        </div>
+                        <div class="col-sm-10 wow fadeInRightBig"  data-animation-delay="200">   
+                            Qianru Sun is an associate professor of computer science at the School of Computing and Information Systems (SCIS), at Singapore Management University (SMU). 
+                            Here is her faculty profile. From 2018 to 2019, she was a research fellow working with Prof. Tat-Seng Chua at the National University of Singapore and Prof.Dr. Bernt Schiele at the MPI for Informatics. 
+                            From 2016 to 2018, she held the Lise Meitner Award Fellowship and worked with Prof.Dr. Bernt Schiele and Prof. Dr. Mario Fritz at the MPI for Informatics. 
+                            She got my Ph.D. degree from Peking University in 2016 and her thesis was advised by Prof. Hong Liu. In 2014, she visited the research group of Prof. Tatsuya Harada at the University of Tokyo. 
+                            Her research interests are computer vision and machine learning.
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row wow fadeInRightBig"  data-animation-delay="200">
+                        <div class="col-sm-2 wow fadeInRightBig"  data-animation-delay="200">   
+                            <center><img  class="img-responsive img-rounded" style="border-radius: 50%" height="150" width="150" src="2024/img/keynoteSpeaker/reza.jpg" alt=""></center>
+                            <h4 class="section-heading"><center><a href="https://users.monash.edu.au/~gholamrh/">Gholamreza (Reza) Haffari</a></center></h4>
+                        </div>
+                        <div class="col-sm-10 wow fadeInRightBig"  data-animation-delay="200"> 
+                            Prof. Gholamreza (Reza) Haffari is a distinguished academic at Monash University's Department of Data Science & Artificial Intelligence, where he also serves as the Director of the Vision & Language Group. 
+                            With a Ph.D. in Computer Science from Simon Fraser University, Haffari has extensively researched and developed generative artificial intelligence systems with a focus on low-level perception and high-level reasoning from multimodal data sources. 
+                            His work spans several crucial areas including the continual knowledge alignment of large language models, safety and alignment of AI systems to human values, and development of LLM-based conversational agents. 
+                            His innovative approaches in AI have earned him recognition such as the ARC Future Fellowship and multiple awards from prestigious associations.
+                            Prof. Haffari's leadership extends into his role as a senior committee member for numerous international AI conferences. His research, backed by substantial funding from organizations like DARPA, Google, and Amazon, aims to develop trustworthy AI technologies in critical areas such as digital health and law. 
+                            His ongoing projects and collaborations continue to set benchmarks in the AI research community, fostering developments that align technological advancements with societal needs and values.
+
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row wow fadeInRightBig"  data-animation-delay="200">
+                        <div class="col-sm-2 wow fadeInRightBig"  data-animation-delay="200">   
+                            <center><img  class="img-responsive img-rounded" style="border-radius: 50%" height="150" width="150" src="2024/img/keynoteSpeaker/LingqiaoLiu.jpeg" alt=""></center>
+                            <h4 class="section-heading"><center><a href="https://www.adelaide.edu.au/directory/lingqiao.liu#">Lingqiao Liu</a></center></h4>
+                        </div>
+                        <div class="col-sm-10 wow fadeInRightBig"  data-animation-delay="200"> 
+                            Dr. Lingqiao Liu is an Associate Professor at the School of Computer Science at The University of Adelaide, Australia. 
+                             He is also an Academic Member of the Australian Institute for Machine Learning. His research spans machine learning, computer vision, and natural language processing. 
+                             His primary objective is to develop practical machine learning systems that are both data-efficient and generalizable for real-world applications. 
+                             His current research focuses on low-supervision machine learning, including semi-supervised learning, unsupervised learning, and few-shot/zero-shot learning. 
+                             Additionally, he is interested in creating generalizable machine learning systems, exploring areas such as domain generalization and compositional generalization. 
+                             His work has significant applications in computer vision, including dense prediction, fine-grained recognition, and content generation, as well as in natural language processing, 
+                             particularly in low-resource NLP and the generalization of NLP systems. In recognition of his contributions, A/Prof Liu received the ARC DECRA (Discovery Early Career Researcher Award) and the University of Adelaide Research Fellowship in 2016.
+                            
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row wow fadeInRightBig"  data-animation-delay="200">
+                        <div class="col-sm-2 wow fadeInRightBig"  data-animation-delay="200">   
+                            <center><img  class="img-responsive img-rounded" style="border-radius: 50%" height="150" width="150" src="2024/img/keynoteSpeaker/TongtongWu.jpg" alt=""></center>
+                            <h4 class="section-heading"><center><a href="https://scholar.google.com/citations?user=u1Qp8lUAAAAJ&hl=zh-CN&oi=ao">Tongtong Wu</a></center></h4>
+                        </div>
+                        <div class="col-sm-10 wow fadeInRightBig"  data-animation-delay="200">   
+                            Dr. Tongtong Wu is a Postdoctoral Research Fellow at Monash University, working with Prof. Reza Haffari,  and holding a jointly supervised Ph.D. from Monash University and Southeast University. 
+                            His research, which focuses on the co-evolution of LLMs, Data, and Knowledge, has attracted widespread interest from industry and received support, including the Monash Seed Grant. 
+                            He has published over ten papers at conferences such as ICLR, ACL, EMNLP, AAAI, IJCAI, etc. As a principal researcher, he has long served as a member of the program committee for major conferences, including ICML, ICLR, NeurIPS, ACL ARR, ACM MM, AAAI, etc.
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Program -->
+     <div id ="program" class="content-section-a">
+        <div class="container">
+            <div class="row">			
+                <div class="wow fadeInLeftBig" data-animation-delay="200">   
+                    <h3 class="section-heading">Program</h3>
+
+                    <p class="lead">
+                        The proposed workshop will include 3 invited talks and 4 or more oral paper presentations. The workshop will be considered for a <b>whole-day</b> meeting.
+                        <!-- You are welcome to join our Workshop either in-person (please login to <a href="http://www.adai.ai/dai/2024/" target="_blank" style="color:orange">DAI2024 portal</a>). You cloud find the complete <a href="http://www.adai.ai/dai/2024/program-overview.html" target="_blank" style="color:orange">program schedule</a> of DAI 2024. -->
+                        <!-- Recordings of each talk will be posted on YouTube [<a href="https://www.youtube.com/channel/UC9We-kEYDMRfy1wX8qf1FnA" target="_blank" style="color:orange">Playlist</a>]. -->
+                        <br>
+                        <!-- <br>
+                        <strong>[2024/09/19]</strong> Checkout our latest  <a href="https://arxiv.org/abs/2309.10020" target="_blank" style="color:orange"><strong>survey paper on continual learning</strong></a>. -->
+                    </p>
+                </div>
+
+                <table class="table" style="width:100%">
+                    <tr >
+                    <!-- <td colspan = 2><strong>Morning Session
+                    </strong></td> -->
+                    <td></td>
+                    </tr>
+
+                    <tr class="info first-row">
+                        <td><strong><h4 class="section-heading">Time</h4></strong></td>
+                        <td><strong><h4 class="section-heading">Programme</h4></strong>
+                        </td>
+                    </tr>
+
+                    <tr class="info otherrow">
+                        <td><h4 class="section-heading">09:00-09:05</h4></td>
+                        <td><h4 class="section-heading">Opening Remarks</h4>
+                        </td>
+                    </tr>
+
+                    <tr class="info otherrow">
+                        <td class="column1">
+                            <h4 class="section-heading">09:05-09:50</h4>
+                            <span class="badge bg-primary shadow-secondary fs-sm">Keynote Speaker</span>
+                        </td>
+                        <td class="column2">
+                            <h4 class="section-heading">Keynote: Adaptation Without Forgetting: Repurposing Foundation Models for Zero-Shot and Few-Shot Semantic Segmentation</h4>
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <a href="javascript:void(0)" class="abstract" onclick="toggleAbstractContent('LingqiaoLiu_abstract')">
+                                        <h4 class="table_button"><b>[Abstract]</b></h4>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="" target="_blank">
+                                        <h4 class="table_button"><b>[Slides]</b></h4>
+                                    </a>
+                                </li>
+                                <div id="LingqiaoLiu_abstract" class="abstract-content">
+                                    Foundation vision models, trained either in a supervised or unsupervised manner, possess extensive knowledge about diverse object appearances. 
+                             These models are often adapted for new computer vision tasks, such as transitioning from classification to segmentation, by adding additional parameters. 
+                             However, in practice this adaptation often relies on a limited set of object categories, causing the system to overfit to the "seen category" and leading to the forgetting of the foundation model's knowledge about other categories. 
+                             In this talk, we present our recent efforts to address this challenge, with a focus on zero-shot and few-shot semantic segmentation applications. 
+                             Our findings demonstrate that parameter-efficient tuning, carefully designed loss functions, and specific input for the newly added module can significantly enhance performance compared to the straightforward extension of foundation models.
+
+                                </div>
+                            </ul>
+                            <div class="col-sm-1 wow fadeInRightBig"  data-animation-delay="200">   
+                                <center><img  class="img-responsive img-rounded" style="border-radius: 50%" src="2024/img/keynoteSpeaker/LingqiaoLiu.jpeg" alt=""></center>
+                            </div>
+                            <div class="col-sm-6 wow fadeInRightBig"  data-animation-delay="200">   
+                                <a href="https://www.adelaide.edu.au/directory/lingqiao.liu#">Lingqiao Liu</a>
+                                <br>
+                                <div style="color: rgb(61, 62, 62);">The University of Adelaide</div>
+                                
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="info otherrow">
+                        <!-- <td class="column1">
+                            <h4 class="section-heading">30 min</h4>
+                        </td>
+                        <td class="column2">
+                            <h4 class="section-heading">Keynote: Class Incremental Learning for Image Classification</h4>
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <a href="javascript:void(0)" class="abstract" onclick="toggleAbstract()"><b>[Abstract]</b></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="../assets/slides/230618_cvpr_mipi_tianfan_xue.pdf" target="_blank"><b>[Slides]</b></a>
+                                </li>
+                                <pre id="abstractText">AI-empower smart cameras are widely used in our daily life, from smart editing on mobile cameras, to scene understanding on self-driving cars.
+                                    AI-empower smart cameras are widely used in our daily life, from smart editing on mobile cameras, to scene understanding on self-driving cars.
+                                </pre>
+                            </ul>
+                            
+                        </td> -->
+                        <td class="column1">
+                            <h4 class="section-heading">09:50-10:35</h4>
+                            <span class="badge bg-primary shadow-secondary fs-sm">Keynote Speaker</span>
+                        </td>
+                        <td class="column2">
+                            <h4 class="section-heading">Keynote: Adapting Foundation Models: A Case Study on Remote Sensing Imagery</h4>
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <a href="javascript:void(0)" class="abstract" onclick="toggleAbstractContent('QianruSun_abstract')">
+                                        <h4 class="table_button"><b>[Abstract]</b></h4>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="" target="_blank">
+                                        <a href="./2024/slides/Adapting Foundation Models A Case Study on Remote Sensing Imagery.pdf"><h4 class="table_button"><b>[Slides]</b></h4>
+                                    </a></a>
+                                </li>
+                                <div id="QianruSun_abstract" class="abstract-content">
+                                    Large visual models, such as CLIP and Stable Diffusion (SD), demonstrate remarkable performance in general image recognition and generation tasks. 
+                                    Their continual learning involves two folds: enhancing their performance with more natural images as input, and adapting them to specialized image domains. 
+                                    Our research targets the latter, using remote sensing (RS) imagery as a use case. RS, which relies on specialized satellites, 
+                                    presents challenges in image annotation and suffers from data scarcity and class imbalance, especially in special spectrums. 
+                                    Adapting models in this domain often leads to strong biases, where features of major classes overshadow those of minor classes. 
+                                    To address this, we recently introduced debLoRA---a generic training approach compatible with various low-rank model adaptation methods (like LoRA) to produce debiased features. 
+                                    In this talk, we will delve into this method and present the results achieved.
+
+                                </div>
+                            </ul>
+                            <div class="col-sm-1 wow fadeInRightBig"  data-animation-delay="200">   
+                                <center><img  class="img-responsive img-rounded" style="border-radius: 50%" src="2024/img/keynoteSpeaker/QianruSun.jpg" alt=""></center>
+                            </div>
+                            <div class="col-sm-6 wow fadeInRightBig"  data-animation-delay="200">   
+                                <a href="https://qianrusun.com/">Qianru Sun</a>
+                                <br>
+                                <div style="color: rgb(61, 62, 62);">Singapore Management University</div>
+                                
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="bginfo otherrow">
+                        <td>
+                            <h4 class="section-heading">10:35-11:00</h4>
+                        </td>
+                        <td>
+                            <h4 class="section-heading">Morning Tea</h4>
+                        </td>
+                    </tr>
+
+                    <tr class="info otherrow">
+                        <td class="column1">
+                            <h4 class="section-heading">11:00-11:45</h4>
+                            <span class="badge bg-primary shadow-secondary fs-sm">Keynote Speaker</span>
+                        </td>
+                        <td class="column2">
+                            <h4 class="section-heading">Keynote: Evolving AI: Advancing Continual Learning in Large Language Models</h4>
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <a href="javascript:void(0)" class="abstract" onclick="toggleAbstractContent('Reza_abstract')">
+                                        <h4 class="table_button"><b>[Abstract]</b></h4>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="" target="_blank">
+                                        <h4 class="table_button"><b>[Slides]</b></h4>
+                                    </a>
+                                </li>
+                                <div id="Reza_abstract" class="abstract-content">
+                                    Continual learning with large language models (LLMs) is crucial for enabling AI systems to adapt and evolve in real-time, maintaining and enhancing knowledge without succumbing to catastrophic forgetting, thereby ensuring sustained operational efficiency and relevance. 
+                                    This report explores the integration of continual learning with large language models across multi-modal information sources. We begin by reviewing traditional continual learning, illustrating its application in text, image, and speech extraction, and multi-modal knowledge graph construction. 
+                                    We then redefine continual learning for LLMs, focusing on overcoming catastrophic forgetting and enhancing knowledge retention through continual pre-training, instruction tuning, and alignment. Looking ahead, we discuss challenges such as data evolution and contamination and propose innovations in architectures and learning paradigms, including language agents evolution and proactive continual learning.
+
+                                </div>
+                            </ul>
+                            <div class="col-sm-1 wow fadeInRightBig"  data-animation-delay="200">   
+                                <center><img  class="img-responsive img-rounded" style="border-radius: 50%" src="2024/img/keynoteSpeaker/reza.jpg" alt=""></center>
+                            </div>
+                            <div class="col-sm-3 wow fadeInRightBig"  data-animation-delay="200">   
+                                <a href="https://users.monash.edu.au/~gholamrh/">Gholamreza (Reza) Haffari</a>
+                                <br>
+                                <div style="color: rgb(61, 62, 62);">Monash University</div>
+                                
+                            </div>
+                            <div class="col-sm-1 wow fadeInRightBig"  data-animation-delay="200">   
+                                <center><img  class="img-responsive img-rounded" style="border-radius: 50%" src="2024/img/keynoteSpeaker/TongtongWu.jpg" alt=""></center>
+                            </div>
+                            <div class="col-sm-3 wow fadeInRightBig"  data-animation-delay="200">   
+                                <a href="https://scholar.google.com/citations?user=u1Qp8lUAAAAJ&hl=zh-CN&oi=ao">Tongtong Wu</a>
+                                <br>
+                                <div style="color: rgb(61, 62, 62);">Monash University</div>
+                                
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="info otherrow">
+                        <td class="column1">
+                            <h4 class="section-heading">11:45-12:30</h4>
+                            <span class="badge bg-primary shadow-secondary fs-sm">Keynote Speaker</span>
+                        </td>
+                        <td class="column2">
+                            <h4 class="section-heading">Keynote: Zero- and Few-shot Keypoint Detection: from modulation to multimodal prompting</h4>
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <a href="javascript:void(0)" class="abstract" onclick="toggleAbstractContent('Koniusz_abstract')">
+                                        <h4 class="table_button"><b>[Abstract]</b></h4>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="" target="_blank">
+                                        <h4 class="table_button"><b>[Slides]</b></h4>
+                                    </a>
+                                </li>
+                                <div id="Koniusz_abstract" class="abstract-content">
+                                    Keypoint detection has been an important topic in computer vision over 20 years. 
+                                    Early methods relied on unsupervised techniques such as Hessian or Harris corner detectors, or SIFT interest points. 
+                                    Modern keypoint detection can now be performed within a few-shot learning paradigm, where annotated support keypoints (e.g., paw, nose, ears, eyes) are detected in an unannotated query. 
+                                    Applications of such keypoints include pose estimation, fine-grained recognition, and pose warping. In this talk, I will discuss our earlier work on few-shot keypoint detection (FSKD) that can generalize to unseen animal species (e.g., training on dogs, testing on cats) and keypoint types (e.g., training on paws, testing on ears). 
+                                    I will also cover how saliency maps and DINO can enhance attention in keypoint detection, how one may streamline the traditional modulation and detection into a single step, and use contrastive learning to improve performance. 
+                                    Finally, I will explain our recent work on multimodal (image, text) keypoint prompting using CLIP for generalized zero- and few-shot keypoint detection.
+                                </div>
+                            </ul>
+                            <div class="col-sm-1 wow fadeInRightBig"  data-animation-delay="200">   
+                                <center><img  class="img-responsive img-rounded" style="border-radius: 50%" src="2024/img/keynoteSpeaker/PiotrKoniusz.jpg" alt=""></center>
+                            </div>
+                            <div class="col-sm-6 wow fadeInRightBig"  data-animation-delay="200">   
+                                <a href="https://users.cecs.anu.edu.au/~koniusz/">Piotr Koniusz</a>
+                                <br>
+                                <div style="color: rgb(61, 62, 62);">Australian National University</div>
+                                
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="bginfo otherrow">
+                        <td>
+                            <h4 class="section-heading">12:30-14:00</h4>
+                        </td>
+                        <td>
+                            <h4 class="section-heading">Lunch</h4>
+                        </td>
+                    </tr>
+
+                    <tr class="info otherrow">
+                        <td>
+                            <h4 class="section-heading">14:00-14:30</h4>
+                        </td>
+                        <td>
+                            <h4 class="section-heading">Fast and Accurate Continual Test Time Domain Adaptation</h4>
+                        </td>
+                    </tr>
+
+                    <tr class="info otherrow">
+                        <td>
+                            <h4 class="section-heading">14:30-15:00</h4>
+                        </td>
+                        <td>
+                            <h4 class="section-heading">Incremental Image Generation with Diffusion Models by Label Embedding Initialization and Fusion</h4>
+                        </td>
+                    </tr>
+
+                    <tr class="info otherrow">
+                        <td>
+                            <h4 class="section-heading">15:00-15:30</h4>
+                        </td>
+                        <td>
+                            <h4 class="section-heading">EAGLE Network: A Novel Incremental Learning Framework for Detecting Unknown Logos in Open-World Environments</h4>
+                        </td>
+                    </tr>
+
+                    <tr class="bginfo otherrow">
+                        <td>
+                            <h4 class="section-heading">15:30-16:00</h4>
+                        </td>
+                        <td>
+                            <h4 class="section-heading">Afternoon Tea</h4>
+                        </td>
+                    </tr>
+
+                    <tr class="info otherrow">
+                        <td>
+                            <h4 class="section-heading">16:00-16:30</h4>
+                        </td>
+                        <td>
+                            <h4 class="section-heading">FAM-Logo: Forward Compatible Multimodal Framework for Few-Shot Logo Incremental Classification</h4>
+                        </td>
+                    </tr>
+
+                    <tr class="info otherrow">
+                        <td>
+                            <h4 class="section-heading">16:30-17:15</h4>
+                        </td>
+                        <td>
+                            <h4 class="section-heading">Panel & Closing Remarks</h4>
+                        </td>
+                    </tr>
+
+                </table>     
+                
+            </div>
+        </div>
+     </div>
+     
+     <!-- Submission -->
+     <div id="submission" class="content-section-a">
+        <div class="container">
+            <div class="row">
+                <div class="wow fadeInRightBig" data-animation-delay="200"> 
+                    <h3 class="section-heading">Submission</h3>
+            
+                    <!--div class="sub-title lead3">Lorem ipsum dolor sit atmet sit dolor greand fdanrh<br> sdfs sit atmet sit dolor greand fdanrh sdfs</div-->
+                    <p class="lead"  style="text-align:justify">
+                        <ul>
+                            <li>The CL-24 will be held together with ACM MM 2024.</li>
+                            <li>Accepted papers will be presented at the workshop and authors retain the right to submit them to other journals.</li>
+                            <li>We invite submissions of original research papers addressing but not limited to the topics as listed above. Submissions should adhere to the ACM Multimedia 2024 formatting guidelines and will undergo a rigorous peer-review process. The template can be found via: <a href="https://2024.acmmm.org/files/ACM-MM24-paper-templates.zip"><button id="submit"><b>Template</b></button></a></li>
+                            <li>Submissions may vary in length from 4 to 8 pages, with additional pages permitted for the reference section (up to 2 pages). There is no distinction between long and short papers, but authors are free to determine the appropriate length for their paper.</li>
+                            <li>Papers have to be submitted via: <a href="https://openreview.net/group?id=acmmm.org/ACMMM/2024/Workshop/CL"><button id="submit"><b>Submit a Paper</b></button></a></li>
+                        </ul>
+                    </p> 
+                </div>
+            </div>
+        </div>
+     </div>
+     
+     <!-- Organizers -->
+     <div id="organizers" class="content-section-a"> 
+         <div class="container">
+            <div class="row">
+                <div class="wow fadeInRightBig"  data-animation-delay="200">
+                    <h3 class="section-heading">Organizers</h3>
+                </div>
+
+                <div class="wow fadeInRightBig"  data-animation-delay="200">
+                    <h4 class="section-heading">Program Committee</h4>
+                </div>
+                <div class="row wow fadeInRightBig"  data-animation-delay="200">
+                    <div class="col-sm-3 wow fadeInRightBig"  data-animation-delay="200">   
+                        <center><img  class="img-responsive img-rounded" style="border-radius: 50%" height="150" width="150" src="2024/img/organizer/WenbinLi.png" alt=""></center>
+                        <h4 class="section-heading"><center><a href="https://scholar.google.com/citations?user=K-kC4yYAAAAJ&hl=zh-CN&authuser=1">Wenbin Li</a></center></h4>
+                        <h5 class="section-heading"><center><i>Nanjing University</i></center></h5>
+                    </div>
+
+                    <div class="col-sm-3 wow fadeInRightBig"  data-animation-delay="200">   
+                        <center><img  class="img-responsive img-rounded" style="border-radius: 50%" height="150" width="150" src="2024/img/organizer/QiFan.png" alt=""></center>
+                        <h4 class="section-heading"><center><a href="https://scholar.google.com.tw/citations?user=da23smAAAAAJ&hl=en">Qi Fan</a></center></h4>
+                        <h5 class="section-heading"><center><i>Nanjing University</i></center></h5>
+                    </div>
+
+                    <div class="col-sm-3 wow fadeInRightBig"  data-animation-delay="200">   
+                        <center><img  class="img-responsive img-rounded" style="border-radius: 50%" height="150" width="150" src="2024/img/organizer/RuiYan.png" alt=""></center>
+                        <h4 class="section-heading"><center><a href="https://scholar.google.com.hk/citations?user=PWy5LfMAAAAJ&hl=zh-CN&oi=ao">Rui Yan</a></center></h4>
+                        <h5 class="section-heading"><center><i>Nanjing University</i></center></h5>
+                    </div>
+
+                    <div class="col-sm-3 wow fadeInRightBig"  data-animation-delay="200">   
+                        <center><img  class="img-responsive img-rounded" style="border-radius: 50%" height="150" width="150" src="2024/img/organizer/HongguangZhang.png" alt=""></center>
+                        <h4 class="section-heading"><center><a href="https://scholar.google.com/citations?user=IUYz14IAAAAJ&hl=en">Hongguang Zhang</a></center></h4>
+                        <h5 class="section-heading"><center><i>Systems Engineering Institute, AMS</i></center></h5>
+                    </div>
+                </div>
+                <div class="row wow fadeInRightBig"  data-animation-delay="200">
+                    <!-- <div class="col-sm-2 wow fadeInRightBig"  data-animation-delay="200">   
+
+                    </div> -->
+                    <div class="col-sm-4 wow fadeInRightBig"  data-animation-delay="200">   
+                        <center><img  class="img-responsive img-rounded" style="border-radius: 50%" height="150" width="150" src="2024/img/organizer/LeiWang.png" alt=""></center>
+                        <h4 class="section-heading"><center><a href="https://scholar.google.com/citations?user=5ClujcoAAAAJ">Lei Wang</a></center></h4>
+                        <h5 class="section-heading"><center><i>University of Wollongong</i></center></h5>
+                    </div>
+
+                    <div class="col-sm-4 wow fadeInRightBig"  data-animation-delay="200">   
+                        <center><img  class="img-responsive img-rounded" style="border-radius: 50%" height="150" width="150" src="2024/img/organizer/JinhuiTang.jpg" alt=""></center>
+                        <h4 class="section-heading"><center><a href="https://scholar.google.com.hk/citations?user=ByBLlEwAAAAJ&hl=zh-CN">Jinhui Tang</a></center></h4>
+                        <h5 class="section-heading"><center><i>Nanjing University of Science and Technology</i></center></h5>
+                    </div>
+
+                    <div class="col-sm-4 wow fadeInRightBig"  data-animation-delay="200">   
+                        <center><img  class="img-responsive img-rounded" style="border-radius: 50%" height="150" width="150" src="2024/img/organizer/JieboLuo.jpg" alt=""></center>
+                        <h4 class="section-heading"><center><a href="https://scholar.google.com/citations?user=CcbnBvgAAAAJ&hl=zh-CN">Jiebo Luo</a></center></h4>
+                        <h5 class="section-heading"><center><i>University of Rochester</i></center></h5>
+                    </div>
+                </div>
+
+                <div class="wow fadeInRightBig"  data-animation-delay="200">
+                    <h4 class="section-heading">Student Organizer</h4>
+                </div>
+                <div class="row wow fadeInRightBig"  data-animation-delay="200">
+                    <div class="col-sm-3 wow fadeInRightBig"  data-animation-delay="200">   
+                        <center><img  class="img-responsive img-rounded" style="border-radius: 50%" height="150" width="150" src="2024/img/organizer/PengHuang.png" alt=""></center>
+                        <h4 class="section-heading"><center><a href="">Peng Huang</a></center></h4>
+                        <h5 class="section-heading"><center><i>Nanjing University of Science and Technology</i></center></h5>
+                    </div>
+
+                    <div class="col-sm-3 wow fadeInRightBig"  data-animation-delay="200">   
+                        <center><img  class="img-responsive img-rounded" style="border-radius: 50%" height="150" width="150" src="2024/img/organizer/ZhipingWu.png" alt=""></center>
+                        <h4 class="section-heading"><center><a href="">Zhiping Wu</a></center></h4>
+                        <h5 class="section-heading"><center><i>Nanjing University</i></center></h5>
+                    </div>
+
+                    <div class="col-sm-3 wow fadeInRightBig"  data-animation-delay="200">   
+                        <center><img  class="img-responsive img-rounded" style="border-radius: 50%" height="150" width="150" src="2024/img/organizer/ShanggeLiu.png" alt=""></center>
+                        <h4 class="section-heading"><center><a href="">Shangge Liu</a></center></h4>
+                        <h5 class="section-heading"><center><i>Nanjing University</i></center></h5>
+                    </div>
+                </div>
+            </div>
+         </div>
+     </div>
+
+    <!-- Program Committee -->
+    <!-- <div id="programcommittee" class="content-section-a">
+        <div class="container">
+            <div class="row">
+                <div class="wow fadeInRightBig" data-animation-delay="200"> 
+                    <h3 class="section-heading">Program Committee</h3>
+            
+                    
+                    <p class="lead"  style="text-align:justify">
+                       TBD
+                    </p> 
+                </div>
+            </div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <!-- Importannt Dates -->
+    <div id="importantdates" class="content-section-a">
+        <div class="container">
+            <div class="row wow fadeInRightBig"  data-animation-delay="200">
+                <h3 class="section-heading">Important Dates</h3>
+                <ul class="lead text-justify">
+                    <li><strike>Paper Submission Deadline: <b>19th, July, 2024</b></strike></li>
+                    <br>
+                    <li><strike><b>Extended</b> Paper Submission Deadline: <b>27th, July, 2024</b></strike></li>
+                    <br>
+                    <li><strike>Paper Acceptance Notification: <b>5th, Aug, 2024</b></strike></li>
+                    <br>
+                    <li><strike>Camera-Ready Deadline: <b>19th, Aug, 2024</b></strike></li>
+                    <br>                
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+
+     <div id="contacts" class="content-section-c ">
+              <!-- Contacts -->
+         <div class="container">
+             <div class="row">
+             
+                 <!--div class="col-sm-6 pull-right wow fadeInRightBig">
+                     <img class="img-responsive " src="img/ipad.png" alt="">
+                 </div-->
+                 
+                 <div class="wow fadeInLeftBig" data-animation-delay="200">   
+                     <h3 class="section-heading" style="color:rgb(29, 7, 7)">Contacts</h3>
+                     <!--div class="sub-title lead3">Lorem ipsum dolor sit atmet sit dolor greand fdanrh<br> sdfs sit atmet sit dolor greand fdanrh sdfs</div-->
+                     <p class="lead"  style="text-align:left;color:rgb(29, 7, 7)">
+                         Contact the Organizing Committee: <b>woods.cl.acm.mm@gmail.com</b>
+                     </p>
+                     
+                 </div>   
+                 <!-- <div class="wow fadeInLeftBig" data-animation-delay="200">   
+                     <h3 class="section-heading"></h3>
+                     <p class="lead"  style="text-align:right">
+                         ©MULA2019
+                     </p>
+                     
+                 </div>   	 -->				
+             </div>
+             <div class="row">
+             
+                         <div class="col-md-6 col-md-offset-3 text-center">
+                             <div >
+                                     <div class="morph-button ">
+                                         <button type="button"></button>
+                                         
+                                     </div>
+                             </div>
+                         </div>	
+             </div>
+ 
+         </div>
+     </div>	
+ 
+    
+     <footer>
+     
+     </footer>
+ 
+     <!-- JavaScript -->
+     <script src="../js/jquery-1.10.2.js"></script>
+     <script src="../js/bootstrap.js"></script>
+     <script src="../js/owl.carousel.js"></script>
+     <script src="../js/script.js"></script>
+     <!-- StikyMenu -->
+     <script src="../js/stickUp.min.js"></script>
+     <script type="text/javascript">
+       jQuery(function($) {
+         $(document).ready( function() {
+           $('.navbar-default').stickUp();
+           
+         });
+       });
+     
+     </script>
+     <!-- Smoothscroll -->
+     <script type="text/javascript" src="../js/jquery.corner.js"></script> 
+     <script src="../js/wow.min.js"></script>
+     <script>
+      new WOW().init();
+     </script>
+     <script src="../js/classie.js"></script>
+     <script src="../js/uiMorphingButton_inflow.js"></script>
+     <!-- Magnific Popup core JS file -->
+     <script src="../js/jquery.magnific-popup.js"></script> 
+ </body>
+ 
+ </html>
+ 
